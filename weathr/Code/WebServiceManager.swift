@@ -18,7 +18,6 @@ class WebServiceManager: NSObject {
     func getDicoFromfile(fileName: String, completion: @escaping (NSDictionary?) -> Void) {
         
         let urlName = self.urlDirectory + fileName
-        print(urlName)
         
         Alamofire.request(urlName, method: .get, encoding: JSONEncoding.default)
             .responseJSON { response in
