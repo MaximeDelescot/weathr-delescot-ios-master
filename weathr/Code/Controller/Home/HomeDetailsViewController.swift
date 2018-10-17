@@ -9,5 +9,23 @@
 import UIKit
 
 class HomeDetailsViewController: UIViewController {
+    
+    var weather : Weather?
+    var color: UIColor?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = self.color
+    }
+    
+    func configWithWeather(weather: Weather, color: UIColor) {
+        
+        self.weather = weather
+        self.color = color
+        
+    }
 
 }

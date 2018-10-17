@@ -34,4 +34,35 @@ struct WeathR {
         navigationBar?.shadowImage = UIImage()
       navigationBar?.titleTextAttributes = [NSAttributedStringKey.foregroundColor:WeathR.forecastColor(index: 0)]
     }
+    
+    static  func getImageForType(type :String) -> UIImage {
+
+        var imageName: String
+        if ((type.elementsEqual("SUNNY")) == true){
+            imageName = "clear_sky"
+        }
+        else if ((type.elementsEqual("CLOUDY")) == true){
+            imageName = "broken_clouds"
+
+        }
+        else if ((type.elementsEqual("RAINY")) == true){
+            imageName = "shower_rain"
+
+        }
+        else if ((type.elementsEqual("SNOWY")) == true){
+            imageName = "snow"
+
+        }
+        else if ((type.elementsEqual("STORMY")) == true){
+            imageName = "thunderstorm"
+        }
+        else{
+            imageName = "clear_sky"
+        }
+        
+        let image = UIImage(named: imageName)!
+        return image
+    }
+    
+    
 }

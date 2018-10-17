@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tte-jH-WGP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tte-jH-WGP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,7 @@
                 <navigationController id="Tte-jH-WGP" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9J1-zH-Heu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,12 +35,35 @@
                         <viewControllerLayoutGuide type="bottom" id="WOZ-D2-pRV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IKd-MY-sYX">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I40-JT-Tif">
+                                <rect key="frame" x="16" y="0.0" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WPg-gW-t5s">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I40-JT-Tif" firstAttribute="leading" secondItem="IKd-MY-sYX" secondAttribute="leading" constant="16" id="88A-1C-EUy"/>
+                            <constraint firstAttribute="trailing" secondItem="I40-JT-Tif" secondAttribute="trailing" constant="16" id="MHI-cO-oT9"/>
+                            <constraint firstItem="I40-JT-Tif" firstAttribute="top" secondItem="cPo-5Q-OCb" secondAttribute="bottom" id="V8f-2x-8Mu"/>
+                            <constraint firstItem="WOZ-D2-pRV" firstAttribute="top" secondItem="I40-JT-Tif" secondAttribute="bottom" id="Zd6-MM-PZt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5UM-dG-vSF">
-                        <barButtonItem key="leftBarButtonItem" image="ic_nav_gear" id="9Vc-Vm-MTB"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_nav_gear" id="9Vc-Vm-MTB">
+                            <connections>
+                                <action selector="parameterButtonTapped:" destination="sbR-Ye-NSp" id="qRC-L1-RGE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ic_about" id="YZS-JJ-XPR">
                             <connections>
                                 <action selector="showAboutAction:" destination="sbR-Ye-NSp" id="0et-Um-Dh3"/>
@@ -48,6 +71,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="weatherCollectionView" destination="I40-JT-Tif" id="9lq-C9-Vjd"/>
                         <segue destination="fWO-80-reb" kind="show" identifier="homeToDetails" id="gCL-qA-BpS"/>
                     </connections>
                 </viewController>
@@ -64,7 +88,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jeM-1w-uCA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fGg-lj-Tih">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>

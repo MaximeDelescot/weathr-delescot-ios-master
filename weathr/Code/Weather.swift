@@ -18,8 +18,6 @@ class Weather: NSObject {
     let windDirection: String?
     let windSpeed: Int?
     
-
-    
     init(date: NSDate, tempMin: Int, tempMax: Int, type: String, uvInd: Int, windDir: String, windSpeed: Int) {
         
         self.date = date
