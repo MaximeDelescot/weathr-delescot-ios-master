@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tte-jH-WGP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fig-nP-QYC">
+            <objects>
+                <navigationController id="Tte-jH-WGP" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9J1-zH-Heu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sbR-Ye-NSp" kind="relationship" relationship="rootViewController" id="gAN-La-OYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9o-6f-qAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="585"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Kit-Ng-hNF">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sbR-Ye-NSp" customClass="HomeViewController" customModule="weathr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cPo-5Q-OCb"/>
+                        <viewControllerLayoutGuide type="bottom" id="WOZ-D2-pRV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKd-MY-sYX">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5UM-dG-vSF">
+                        <barButtonItem key="leftBarButtonItem" image="ic_nav_gear" id="9Vc-Vm-MTB"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_about" id="YZS-JJ-XPR">
+                            <connections>
+                                <action selector="showAboutAction:" destination="sbR-Ye-NSp" id="0et-Um-Dh3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="fWO-80-reb" kind="show" identifier="homeToDetails" id="gCL-qA-BpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPp-fw-YNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="585"/>
+        </scene>
+        <!--Home Details View Controller-->
+        <scene sceneID="07k-of-zhE">
+            <objects>
+                <viewController storyboardIdentifier="HomeDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fWO-80-reb" customClass="HomeDetailsViewController" customModule="weathr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K35-dC-fhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="jeM-1w-uCA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fGg-lj-Tih">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT9-pp-y7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2356" y="584"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_about" width="15" height="15"/>
+        <image name="ic_nav_gear" width="16" height="16"/>
+    </resources>
+</document>
