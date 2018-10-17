@@ -14,6 +14,12 @@ class HomeViewController: UIViewController {
     super.viewDidLoad()
     self.title = "WeathR"
     WeathR.applyTheme(self.navigationController?.navigationBar)
+    
+    WeatherManager.sharedInstance.loadWeather(city: "Paris", forecasts: 10) { (succed) in
+
+
+    }
+    
   }
   
   //MARK: Action
