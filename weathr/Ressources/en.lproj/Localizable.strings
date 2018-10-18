@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  weathr
+
+  Created by Maxime Delescot on 18/10/2018.
+  Copyright © 2018 Smart&Soft. All rights reserved.
+*/
+
+//Parameters
+"PARAMETERS" = "Parameters";
+"CITY" = "City";
+"NUMBERDAYS" = "Numbers of days";
+"OK" = "Ok";
+"INVALIDATEDCITY" = "Invalidated city";
+"INVALIDATEDNUMBER" = "Invaidated Number";
+
+//Details
+"TEMPMIN" = "Min temperature";
+"TEMPMAX" = "Max temperature";
+"UVINDEX" = "UV Index";
+"WIND" = "Wind";
+
+//City
+"PARIS" = "Paris";
+"LONDON" = "London";
+"MILAN" = "Milan";

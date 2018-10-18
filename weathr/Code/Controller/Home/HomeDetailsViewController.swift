@@ -27,6 +27,12 @@ class HomeDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.windTitleLabel.text = NSLocalizedString("WIND", comment: "")
+        self.uvTitleLabel.text = NSLocalizedString("UVINDEX", comment: "")
+        self.tempMaxTitleLabel.text = NSLocalizedString("TEMPMAX", comment: "")
+        self.tempMinTitleLabel.text = NSLocalizedString("TEMPMIN", comment: "")
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

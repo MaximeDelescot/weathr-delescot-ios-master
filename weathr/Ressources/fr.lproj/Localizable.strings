@@ -6,15 +6,22 @@
   Copyright © 2016 Allan Vialatte. All rights reserved.
 */
 
-"wr.content.label.temps.min" = "Température min.";
-"wr.content.label.temps.max" = "Température max.";
-"wr.content.label.wind" = "Vent";
 
-"wr.content.sign.degres" = "°";
+//Parameters
+"PARAMETERS" = "Paramètres";
+"CITY" = "Ville";
+"NUMBERDAYS" = "Nombres de jours";
+"OK" = "Ok";
+"INVALIDATEDCITY" = "Ville invalide";
+"INVALIDATEDNUMBER" = "Nombre invalide";
 
-"wr.content.write.error" = "Erreur";
-"wr.content.write.error.connexion" = "Aucune connexion n'est disponible";
-"wr.content.write.ok" = "Ok";
-"wr.content.write.settings" = "Paramètres";
-"wr.content.write.city" = "Villes";
-"wr.content.write.days" = "Nombre de jours";
+//Details
+"TEMPMIN" = "Température Min";
+"TEMPMAX" = "Température Max";
+"UVINDEX" = "Index UV";
+"WIND" = "Vent";
+
+//City
+"PARIS" = "Paris";
+"LONDON" = "Londres";
+"MILAN" = "Milan";

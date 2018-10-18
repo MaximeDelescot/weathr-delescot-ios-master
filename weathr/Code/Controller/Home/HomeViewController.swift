@@ -16,7 +16,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
       
     super.viewDidLoad()
-    self.title = "WeathR"
     WeathR.applyTheme(self.navigationController?.navigationBar)
       
       
@@ -33,8 +32,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
   }
   
   func loadWeather() {
-    
-    self.title = ParametersManager.sharedInstance.city!.uppercased()
+
+    self.title = NSLocalizedString(ParametersManager.sharedInstance.city!.uppercased(), comment: "")
     WeatherManager.sharedInstance.loadWeather(city: ParametersManager.sharedInstance.city!, forecasts: ParametersManager.sharedInstance.number!) { (succed) in
       
       self.weatherCollectionView.reloadData()
@@ -90,36 +89,39 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
   
   func displayParameterAlert(){
     
-    let alert = UIAlertController(title: "Paramètres", message: nil, preferredStyle: .alert)
+    let alert = UIAlertController(title: NSLocalizedString("PARAMETERS", comment: ""), message: nil, preferredStyle: .alert)
     
     alert.addTextField(configurationHandler: { textField in
-      textField.placeholder = "Ville"
+      textField.placeholder = NSLocalizedString("CITY", comment: "")
     })
     
     alert.addTextField(configurationHandler: { textField in
-      textField.placeholder = "Nombres de jours"
+      textField.placeholder = NSLocalizedString("NUMBERDAYS", comment: "")
     })
     
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { action in
       
       let nameField = alert.textFields![0] as UITextField
       let numberField = alert.textFields![1] as UITextField
       
       if( nameField.text?.lowercased().elementsEqual("paris") == false &&
         nameField.text?.lowercased().elementsEqual("milan") == false &&
-        nameField.text?.lowercased().elementsEqual("london") == false){
+        nameField.text?.lowercased().elementsEqual("london") == false && nameField.text?.lowercased().elementsEqual("londres") == false){
         
-          self.displayAlertErrorWithMessage(message: "Ville invalide")
+          self.displayAlertErrorWithMessage(message: NSLocalizedString("INVALIDATEDCITY", comment: ""))
       }
       else if(Int((numberField.text)!) == nil ||
         Int((numberField.text)!)! < 5 ||
         Int((numberField.text)!)! > 10){
         
-          self.displayAlertErrorWithMessage(message: "Nombre invalide")
+          self.displayAlertErrorWithMessage(message: NSLocalizedString("INVALIDATEDNUMBER", comment: ""))
       }
       else{
-
-        ParametersManager.sharedInstance.changeParameters(city: (nameField.text?.lowercased())!, number: Int((numberField.text)!)!)
+        var city = nameField.text?.lowercased()
+        if(city?.elementsEqual("londres") == true){
+            city = "london"
+        }
+        ParametersManager.sharedInstance.changeParameters(city: city!, number: Int((numberField.text)!)!)
         
         self.loadWeather()
       }
@@ -133,7 +135,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
     
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { action in
       
       self.displayParameterAlert()
       

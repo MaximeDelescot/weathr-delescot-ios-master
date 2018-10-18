@@ -28,6 +28,7 @@
 		6D8004811EAA4C550077D1C1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D80047F1EAA4C550077D1C1 /* UIColor+Hex.swift */; };
 		78EC1E122177FAA300CAA38C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EC1E112177FAA300CAA38C /* CoreDataManager.swift */; };
 		78EC1E152178069200CAA38C /* Weathr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78EC1E132178069200CAA38C /* Weathr.xcdatamodeld */; };
+		78EC1E1C21789D2B00CAA38C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78EC1E1E21789D2B00CAA38C /* Localizable.strings */; };
 		78F7DB9C217788C40014BF80 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DB9B217788C40014BF80 /* Weather.swift */; };
 		78F7DB9F21778B150014BF80 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DB9E21778B150014BF80 /* WebServiceManager.swift */; };
 		78F7DBA121778CA30014BF80 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DBA021778CA30014BF80 /* WeatherManager.swift */; };
@@ -81,6 +82,9 @@
 		74554B7DC695F48EC885D180 /* Pods_weathrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weathrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EC1E112177FAA300CAA38C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		78EC1E142178069200CAA38C /* Weathr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weathr.xcdatamodel; sourceTree = "<group>"; };
+		78EC1E1721789C2300CAA38C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		78EC1E1D21789D2B00CAA38C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		78EC1E1F21789D3300CAA38C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		78F7DB9B217788C40014BF80 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		78F7DB9E21778B150014BF80 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		78F7DBA021778CA30014BF80 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				3BB9DE1C1C85E0C90028C1A3 /* LaunchScreen.storyboard */,
 				3BB9DE1F1C85E0C90028C1A3 /* Info.plist */,
 				78EC1E132178069200CAA38C /* Weathr.xcdatamodeld */,
+				78EC1E1E21789D2B00CAA38C /* Localizable.strings */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				3BED83D41C89C848009B5AE7 /* css in Resources */,
 				3BED83D31C89C848009B5AE7 /* about.html in Resources */,
 				3B3B243C1C86F67D0072A006 /* About.storyboard in Resources */,
+				78EC1E1C21789D2B00CAA38C /* Localizable.strings in Resources */,
 				3BB9DE1E1C85E0C90028C1A3 /* LaunchScreen.storyboard in Resources */,
 				78F7DBA62177BC390014BF80 /* WeatherCollectionViewCell.xib in Resources */,
 				3BB9DE1B1C85E0C90028C1A3 /* Assets.xcassets in Resources */,
@@ -661,8 +667,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BB9DE1D1C85E0C90028C1A3 /* Base */,
+				78EC1E1721789C2300CAA38C /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		78EC1E1E21789D2B00CAA38C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78EC1E1D21789D2B00CAA38C /* en */,
+				78EC1E1F21789D3300CAA38C /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -672,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -725,6 +742,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
