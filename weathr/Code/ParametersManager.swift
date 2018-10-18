@@ -16,14 +16,28 @@ class ParametersManager: NSObject {
     
     override init() {
         
-        self.city = "Paris"
-        self.number = 7
+        let cityUD = UserDefaults.standard.string(forKey: "city")
+        let numberUD = UserDefaults.standard.integer(forKey: "number")
+        
+        if(cityUD != nil && numberUD != 0){
+            
+            self.city = cityUD
+            self.number = numberUD
+        }
+        else{
+            
+            self.city = "Paris"
+            self.number = 7
+        }
     }
     
     func changeParameters(city: String, number: Int)  {
         
         self.city = city
         self.number = number
+        
+        UserDefaults.standard.set(self.city, forKey: "city")
+        UserDefaults.standard.set(self.number, forKey: "number")
     }
     
     

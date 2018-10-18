@@ -46,7 +46,20 @@ class WeatherManager: NSObject {
                     
                 }
                 self.weatherArray = weatherArray
+                
+                CoreDataManager.sharedInstance.deleteAllData(entity: "WeatherEntities")
+                CoreDataManager.sharedInstance.saveWeathers(weatherArray: self.weatherArray)
+                
                 completion(true)
+                
+            }
+            else{
+                
+                self.weatherArray = CoreDataManager.sharedInstance.getWeathers()!
+                if(self.weatherArray.count>0){
+                    completion(true)
+                }
+                
             }
             completion(false)
         }

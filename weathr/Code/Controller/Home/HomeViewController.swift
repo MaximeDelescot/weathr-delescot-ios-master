@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     self.weatherCollectionView.dataSource = self
     self.weatherCollectionView.register(UINib.init(nibName: "WeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "WeatherCollectionViewCell")
 
-    
   }
   
   override func viewWillAppear(_ animated: Bool) {
